@@ -106,10 +106,24 @@ function plusOrMinus(element) {
 
 
 let timer = document.querySelector('.header__timer-extra');
+let txt = document.querySelector('.header__timer')
 
-function timerLevel () {
+function timerLevel1 () {
     timer.innerHTML == 100 ? timer.innerHTML = '100' : timer.innerHTML++;
-    setTimeout(() => timerLevel(), 500);
+    _timer1 = setTimeout(() => timerLevel1(), 250);
+    if (timer.innerHTML >= 50){
+        clearTimeout(_timer1);
+        timer2 = setTimeout(() => timerLevel1(), 500);
+    }
+    if (timer.innerHTML <= 50) {
+        txt.classList.add('timer-big')
+    } else if (timer.innerHTML >= 50) {
+        txt.classList.remove('timer-big');
+        txt.classList.add('big-timer');
+    }
+    /* ?  : txt.classList.remove('timer-big'), txt.classList.add('big-timer'); */
 }
-timerLevel(); 
 
+
+
+timerLevel1();

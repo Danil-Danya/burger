@@ -249,6 +249,14 @@ a {
     color: #fff;
     animation: neonTxt 5s infinite;
 }
+.timer-big{
+    animation: bigTxt 12.5s infinite,
+    neonTxt 5s infinite;
+}
+.big-timer{
+    animation: txtBig 25s infinite,
+    neonTxt 5s infinite;
+}
 .button {
     position: fixed;
     bottom: 0;
@@ -425,4 +433,23 @@ a {
         0 0 54px rgba(255, 251, 0, 0.92);
     }
     
+}
+
+@keyframes bigTxt{
+    0%{
+        font-size: 15px;
+    }
+    100%{
+        font-size: 25px;
+    }
+}
+
+
+@keyframes txtBig{
+    0%{
+        font-size: 25px;
+    }
+    100%{
+        font-size: 50px;
+    }
 }
